@@ -1,6 +1,6 @@
 .page-nav {
   display: flex;
-  margin-top: 50px;
+  flex-wrap: wrap;
 }
 .page-nav .title {
   margin-right: auto;
@@ -9,6 +9,7 @@
 }
 .page-nav .list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   gap: 24px;
 }

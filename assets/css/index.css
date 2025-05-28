@@ -7,18 +7,13 @@
 :root {
   /*page design width*/
   --base-width: 1366;
+  --page-padding: calc((143 / var(--base-width)) * 100vw);
   /*colours*/
   --col_action: #cf755a;
+  --col_txt_p: #737373;
   --col_txt_btn: #fcfcfc;
   --col_txt_link: #464646;
 }
-.page-padding {
-  padding-left: calc((143 / var(--base-width)) * 100vw);
-  padding-right: calc((143 / var(--base-width)) * 100vw);
-}
-/* PAGE SETUP */
-
-/* x */
 h1 {
   --text-size: 59;
   font-weight: var(--fw_bold);
@@ -28,7 +23,7 @@ h2 {
   font-weight: var(--fw_bold);
 }
 h3 {
-  --text-size: 12;
+  --text-size: 42;
   font-weight: var(--fw_bold);
 }
 h4 {
@@ -39,12 +34,14 @@ h4 {
 .btn {
   background-color: var(--col_action);
   padding: 0.5em;
+  display: inline-block;
   color: var(--col_txt_btn);
   text-decoration: none;
   font-weight: var(--fw_bold);
 }
-/* TEXT */
+/* PAGE SETUP */
 
+/* HERO */
 .hero {
   background-image: url(../img/stock-images/walking-on-wall.jpg);
   background-position: center;
@@ -52,6 +49,7 @@ h4 {
   min-height: 768px;
   display: flex;
   flex-direction: column;
+  padding: 50px var(--page-padding) 38px var(--page-padding);
 }
 .hero header {
   display: flex;
@@ -76,7 +74,6 @@ h4 {
   padding: 15px 40px;
 }
 .hero .scroll {
-  margin-bottom: 38px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -84,3 +81,29 @@ h4 {
 .hero .scroll img {
   width: 24px;
 }
+/* HERO */
+
+/* CATALOGUE */
+.catalogue .row {
+  display: flex;
+  align-items: center;
+  padding: 72px var(--page-padding);
+  gap: 24px;
+}
+.catalogue .row article h3 {
+  margin-bottom: 18px;
+}
+.catalogue .row article p {
+  margin-bottom: 64px;
+  color: var(--col_txt_p);
+}
+.catalogue .row article .btn {
+  padding: 15px 28px;
+}
+.catalogue .row img {
+  width: calc((528 / var(--base-width)) * 100vw);
+}
+.catalogue :nth-child(even) {
+  flex-direction: row-reverse;
+}
+/* CATALOGUE */
