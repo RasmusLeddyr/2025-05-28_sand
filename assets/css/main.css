@@ -1,27 +1,31 @@
 /* DEFAULTS */
 *,
 *::before,
-*::after,
-*::placeholder {
+*::after {
   margin: 0;
-  padding: 0%;
-  border: 0;
-  outline: 0;
-  text-decoration: none;
-  list-style: none;
-  resize: none;
-  font-size: 16px;
-  font-weight: normal;
-  color: black;
-  background-color: rgba(0, 0, 0, 0);
-
-  --fluid-text: 16;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a,
+button {
+  --text-size: 16; /* The max text size, reached once window width is at --base-width */
+  --text-shrink: 2; /* This number is divided by --text-size to decide a minimum size value */
   font-size: clamp(
-    var(--fluid-text) * 1px / 2,
-    calc(var(--fluid-text) / var(--base-width)) * 100vw,
-    var(--fluid-text) * 1px
+    var(--text-size) * 1px / var(--text-shrink),
+    calc(var(--text-size) / var(--base-width)) * 100vw,
+    var(--text-size) * 1px
   );
-
+}
+body {
+  font-weight: normal;
   font-family: "Raleway", Arial, sans-serif;
 }
 /* DEFAULTS */
@@ -38,15 +42,6 @@
   --fw_bold: 700;
   --fw_extra-bold: 800;
   --fw_heavy: 900;
-
-  /*colours*/
-  --col_main: #ff9964;
-  --col_main2: #441dac;
-  --col_main3: #6fccd3;
-  --col_blank: rgb(223, 223, 223);
-  --col_txt: #707070;
-  --col_txt2: rgb(255, 255, 255);
-  --col_txt3: rgb(0, 0, 0);
 }
 /* VARIABLES */
 

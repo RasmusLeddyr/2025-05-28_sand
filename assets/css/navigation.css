@@ -1,34 +1,38 @@
-#nav {
-  background-color: var(--col_main);
+.page-nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 50px;
 }
-#nav .title {
-  flex-shrink: 0;
-  max-width: 276px;
-  margin-right: calc((210 / var(--base-width)) * 100vw);
+.page-nav .title {
+  margin-right: auto;
+  --text-size: 17;
+  font-family: var(--fw_bold);
 }
-#nav .title img {
-  width: 100%;
-}
-#nav ul {
+.page-nav .list {
   display: flex;
-  gap: 64px;
-  margin-right: calc((146 / var(--base-width)) * 100vw);
+  list-style: none;
+  gap: 24px;
 }
-#nav ul a {
-  font-size: 10px;
-  font-weight: var(--fw_medium);
-  color: white;
+.page-nav .list a {
+  text-decoration: none;
+  color: var(--col_txt_link);
+  position: relative;
+  transition: color 0.5s ease-in-out;
 }
-#nav .search {
-  width: 18px;
-  flex-shrink: 0;
+.page-nav .list a:hover {
+  color: rgb(0, 0, 0);
 }
-#nav .search img {
+.page-nav .list a::after {
+  content: "";
+  background-color: var(--col_action);
+  height: 2px;
+  border-radius: 100vw;
   width: 100%;
-  margin-top: 8px;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.page-nav .list a:hover::after {
+  opacity: 1;
 }

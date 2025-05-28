@@ -5,7 +5,12 @@
 
 /* PAGE SETUP */
 :root {
+  /*page design width*/
   --base-width: 1366;
+  /*colours*/
+  --col_action: #cf755a;
+  --col_txt_btn: #fcfcfc;
+  --col_txt_link: #464646;
 }
 .page-padding {
   padding-left: calc((143 / var(--base-width)) * 100vw);
@@ -13,21 +18,69 @@
 }
 /* PAGE SETUP */
 
-/* TEXT */
+/* x */
 h1 {
-  --fluid-text: 30;
+  --text-size: 59;
   font-weight: var(--fw_bold);
 }
 h2 {
-  --fluid-text: 20;
+  --text-size: 20;
   font-weight: var(--fw_bold);
 }
 h3 {
-  --fluid-text: 12;
+  --text-size: 12;
   font-weight: var(--fw_bold);
 }
 h4 {
-  --fluid-text: 10;
+  --text-size: 10;
+  font-weight: var(--fw_bold);
+}
+
+.btn {
+  background-color: var(--col_action);
+  padding: 0.5em;
+  color: var(--col_txt_btn);
+  text-decoration: none;
   font-weight: var(--fw_bold);
 }
 /* TEXT */
+
+.hero {
+  background-image: url(../img/stock-images/walking-on-wall.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 768px;
+  display: flex;
+  flex-direction: column;
+}
+.hero header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.hero header h1 {
+  color: var(--col_action);
+  max-width: calc((750 / var(--base-width)) * 100vw);
+  margin-bottom: 16px;
+}
+.hero header p {
+  max-width: calc((560 / var(--base-width)) * 100vw);
+  font-weight: var(--fw_semi-bold);
+  --text-size: 18;
+  margin-bottom: 64px;
+}
+.hero header .btn {
+  padding: 15px 40px;
+}
+.hero .scroll {
+  margin-bottom: 38px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.hero .scroll img {
+  width: 24px;
+}
