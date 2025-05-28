@@ -1,0 +1,33 @@
+/* LINK OTHER CSS FILES */
+@import url("navigation.css");
+@import url("footer.css");
+/* LINK OTHER CSS FILES */
+
+/* PAGE SETUP */
+:root {
+  --base-width: 1366;
+}
+.page-padding {
+  padding-left: calc((143 / var(--base-width)) * 100vw);
+  padding-right: calc((143 / var(--base-width)) * 100vw);
+}
+/* PAGE SETUP */
+
+/* TEXT */
+h1 {
+  --fluid-text: 30;
+  font-weight: var(--fw_bold);
+}
+h2 {
+  --fluid-text: 20;
+  font-weight: var(--fw_bold);
+}
+h3 {
+  --fluid-text: 12;
+  font-weight: var(--fw_bold);
+}
+h4 {
+  --fluid-text: 10;
+  font-weight: var(--fw_bold);
+}
+/* TEXT */

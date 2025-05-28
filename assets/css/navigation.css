@@ -1,0 +1,34 @@
+#nav {
+  background-color: var(--col_main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#nav .title {
+  flex-shrink: 0;
+  max-width: 276px;
+  margin-right: calc((210 / var(--base-width)) * 100vw);
+}
+#nav .title img {
+  width: 100%;
+}
+#nav ul {
+  display: flex;
+  gap: 64px;
+  margin-right: calc((146 / var(--base-width)) * 100vw);
+}
+#nav ul a {
+  font-size: 10px;
+  font-weight: var(--fw_medium);
+  color: white;
+}
+#nav .search {
+  width: 18px;
+  flex-shrink: 0;
+}
+#nav .search img {
+  width: 100%;
+  margin-top: 8px;
+}

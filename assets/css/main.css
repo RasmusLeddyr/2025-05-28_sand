@@ -1,0 +1,56 @@
+/* DEFAULTS */
+*,
+*::before,
+*::after,
+*::placeholder {
+  margin: 0;
+  padding: 0%;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  resize: none;
+  font-size: 16px;
+  font-weight: normal;
+  color: black;
+  background-color: rgba(0, 0, 0, 0);
+
+  --fluid-text: 16;
+  font-size: clamp(
+    var(--fluid-text) * 1px / 2,
+    calc(var(--fluid-text) / var(--base-width)) * 100vw,
+    var(--fluid-text) * 1px
+  );
+
+  font-family: "Raleway", Arial, sans-serif;
+}
+/* DEFAULTS */
+
+/* VARIABLES */
+:root {
+  /*font weights*/
+  --fw_thin: 100;
+  --fw_extra-light: 200;
+  --fw_light: 300;
+  --fw_normal: 400;
+  --fw_medium: 500;
+  --fw_semi-bold: 600;
+  --fw_bold: 700;
+  --fw_extra-bold: 800;
+  --fw_heavy: 900;
+
+  /*colours*/
+  --col_main: #ff9964;
+  --col_main2: #441dac;
+  --col_main3: #6fccd3;
+  --col_blank: rgb(223, 223, 223);
+  --col_txt: #707070;
+  --col_txt2: rgb(255, 255, 255);
+  --col_txt3: rgb(0, 0, 0);
+}
+/* VARIABLES */
+
+/* 
+DYNAMIC WIDTH: (replace "X" with width from wireframe)
+calc(( X / var(--base-width)) * 100vw);
+*/
