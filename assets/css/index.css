@@ -43,7 +43,7 @@ h4 {
 
 /* HERO */
 .hero {
-  background-image: url(../img/stock-images/walking-on-wall.jpg);
+  background-image: url("../img/stock-images/walking-on-wall.jpg");
   background-position: center;
   background-size: cover;
   min-height: 768px;
