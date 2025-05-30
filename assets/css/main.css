@@ -24,6 +24,9 @@ button {
     var(--text-size) * 1px
   );
 }
+button {
+  cursor: pointer;
+}
 body {
   font-weight: normal;
   font-family: "Raleway", Arial, sans-serif;
