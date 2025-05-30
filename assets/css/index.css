@@ -30,7 +30,6 @@ h4 {
   --text-size: 25;
   font-weight: var(--fw_bold);
 }
-
 .btn {
   background-color: var(--col_action);
   padding: 0.5em;
@@ -68,6 +67,7 @@ h4 {
   max-width: calc((560 / var(--base-width)) * 100vw);
   font-weight: var(--fw_semi-bold);
   --text-size: 18;
+  --text-shrink: 1.5;
   margin-bottom: 64px;
 }
 .hero header .btn {
@@ -77,6 +77,7 @@ h4 {
   display: flex;
   align-items: center;
   gap: 16px;
+  font-size: 17px;
 }
 .hero .scroll img {
   width: 24px;
@@ -84,10 +85,15 @@ h4 {
 /* HERO */
 
 /* CATALOGUE */
+.catalogue {
+  display: flex;
+  flex-direction: column;
+  padding: 72px var(--page-padding);
+  gap: 80px;
+}
 .catalogue .row {
   display: flex;
   align-items: center;
-  padding: 72px var(--page-padding);
   gap: 24px;
 }
 .catalogue .row article h3 {
@@ -96,12 +102,14 @@ h4 {
 .catalogue .row article p {
   margin-bottom: 64px;
   color: var(--col_txt_p);
+  font-family: serif;
 }
 .catalogue .row article .btn {
   padding: 15px 28px;
 }
 .catalogue .row img {
-  width: calc((528 / var(--base-width)) * 100vw);
+  max-width: calc((528 / var(--base-width)) * 100vw);
+  width: 100%;
 }
 .catalogue :nth-child(even) {
   flex-direction: row-reverse;
@@ -116,19 +124,19 @@ h4 {
   align-items: center;
   padding: 75px var(--page-padding) 192px var(--page-padding);
 }
-.news .title {
+.news header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .news header h2 {
   margin-bottom: 26px;
-  text-align: center;
 }
 .news header p {
   color: var(--col_txt_p);
+  font-family: serif;
   width: calc((460 / var(--base-width)) * 100vw);
-  text-align: center;
   margin-bottom: 72px;
 }
 .news .list {

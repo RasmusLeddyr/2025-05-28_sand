@@ -1,9 +1,111 @@
-/* MEDIA QUERY TABLET */
-@media only screen and (max-width: 1280px) {
-}
-/* MEDIA QUERY TABLET */
-
 /* MEDIA QUERY PHONE */
 @media only screen and (max-width: 600px) {
+  /* PAGE SETUP */
+  :root {
+    /*page design width*/
+    --base-width: 600;
+    --page-padding: calc((16 / var(--base-width)) * 100vw);
+    /*colours*/
+    --col_action: #cf755a;
+    --col_txt_p: #737373;
+    --col_txt_btn: #fcfcfc;
+    --col_txt_link: #464646;
+  }
+  h1 {
+    --text-size: 64;
+    font-weight: var(--fw_bold);
+  }
+  h2 {
+    --text-size: 48;
+    font-weight: var(--fw_bold);
+  }
+  h3 {
+    --text-size: 32;
+    font-weight: var(--fw_bold);
+  }
+  h4 {
+    --text-size: 24;
+    font-weight: var(--fw_bold);
+  }
+  /* PAGE SETUP */
+
+  /* HERO */
+  .hero {
+    min-height: 0;
+    padding: 32px var(--page-padding);
+  }
+  .hero header {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+  .hero header h1 {
+    max-width: 100%;
+  }
+  .hero header p {
+    max-width: 100%;
+    --text-size: 16;
+    margin-bottom: 32px;
+  }
+  .hero header .btn {
+    padding: 1em 2em;
+  }
+  /* HERO */
+
+  /* CATALOGUE */
+  .catalogue {
+    padding: 96px var(--page-padding);
+    gap: 64px;
+  }
+  .catalogue .row {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+  .catalogue .row article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .catalogue .row article h3 {
+    margin-bottom: 4px;
+  }
+  .catalogue .row article p {
+    margin-bottom: 16px;
+    max-width: 75%;
+  }
+  .catalogue .row article .btn {
+    padding: 1em 2em;
+  }
+  .catalogue .row img {
+    max-width: 100%;
+  }
+  /* CATALOGUE */
+
+  /* NEWS */
+  .news {
+    padding: 64px var(--page-padding);
+  }
+  .news header h2 {
+    margin-bottom: 16px;
+  }
+  .news header p {
+    width: 75%;
+    margin-bottom: 64px;
+  }
+  .news .list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 64px;
+  }
+  .news .list img {
+    margin-bottom: 8px;
+  }
+  .news .list .info {
+    --text-size: 16;
+    margin-bottom: 8px;
+  }
+  .news .list .title {
+    margin-bottom: 8px;
+  }
+  /* NEWS */
 }
 /* MEDIA QUERY PHONE */

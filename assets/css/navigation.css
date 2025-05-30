@@ -37,3 +37,8 @@
 .page-nav .list a:hover::after {
   opacity: 1;
 }
+
+/* MEDIA QUERY PHONE */
+@media only screen and (max-width: 600px) {
+}
+/* MEDIA QUERY PHONE */
